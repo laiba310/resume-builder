@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Resume</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
+</head>
+<body>
+    <form>
+        <div class="main-contient">
+            <div class="content"> 
+                <h1 class="heading">Resume Builder</h1>
+                <div class="pi">
+                    <h1>Personal Information</h1>
+
+                    <label for="fullName" class="pi-label">Full Name: </label>
+                    <div class="name-inputs">
+                        <div class="input-group">
+                            <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                            <label for="firstName" class="input-desc">First Name</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+                            <label for="lastName" class="input-desc">Last Name</label>
+                        </div>
+                    </div>
+
+                    <label for="address" class="address">Address: </label>
+
+                    <div class="input-group">
+                        <input type="text" id="address1" name="address1">
+                        <label for="address1" class="input-desc">Street Address 1</label>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="text" id="address1" name="address2" \>
+                        <label for="address2" class="input-desc">Street Address 2</label>
+                    </div>
+
+                    <div class="name-inputs">
+                        <div class="input-group">
+                            <input type="text" id="city" name="city" placeholder="City" required>
+                            <label for="city" class="input-desc">City</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="state" name="state" placeholder="State" required>
+                            <label for="state" class="input-desc">State</label>
+                        </div>
+                    </div>
+             
+                    <label for="phone" class="pi-label"></label> 
+                    <div class="name-inputs">
+                        <div class="input-group">
+                            <input type="text" id="phone" name="phone" placeholder="(000) 000-0000" required style="width: 396px;">
+                            <label for="phone" class="input-desc">Phone</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="email" name="email" placeholder="xyz@gmail.com" required>
+                            <label for="email" class="input-desc">email</label>
+                        </div>
+                </div>
+                <div class="edu">
+                    <h1>Education</h1>
+      
+                    <!-- Gender and Age Section -->
+<div class="input-row">
+    <div class="input-groupp">
+        <label for="gender" class="pi-label" style="margin-left: 0.1rem;">Gender:</label>
+        <select id="gender" name="gender">
+            <option value="">Please Select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+    </div>
+
+    <div class="input-groupp" >
+        <label for="age" class="pi-label"style="margin-left: 0.1rem;">Age:</label>
+        <select id="age" name="age">
+            <option value="">Please Select</option>
+            <option value="18-25">18-25</option>
+            <option value="26-35">26-35</option>
+            <option value="36-45">36-45</option>
+        </select>
+    </div>
+</div>
+        <!--nationality and birth place-->
+<div class="form-roww">
+    <div class="input-grouppp">
+        <label for="nationality" style=" font-size: 1.2rem; font-weight: bold; margin-left: 1.83;">Nationality</label>
+        <input type="text" id="nationality" name="nationality">
+    </div>
+    <div class="input-grouppp">
+        <label for="birthPlace"style=" font-size: 1.2rem; font-weight: bold; margin-left: 1.83;">Birth Place</label>
+        <input type="text" id="birthPlace" name="birthPlace">
+    </div>
+</div>
+
+<div class="form-roww">
+    <div class="input-grouppp">
+        <label for="degree" style=" font-size: 1.2rem; font-weight: bold; margin-left: 1.83; ">Degree</label>
+        <select id="DEGREE" name="DEGREE" style="height: 35px;border-radius: 0.4rem;">
+            <option value="">Please Select</option>
+            <option value="B.sc">B.sc</option>
+            <option value="M.sc">M.sc</option>
+            <option value="PHD">PHD</option>
+        </select>
+    </div>
+    <div class="input-grouppp">
+        <label for="insitute"style=" font-size: 1.2rem; font-weight: bold; margin-left: 1.83;">insitute/university</label>
+        <input type="text" id="insitute" name="insitute">
+    </div>
+</div>
+    <div class="input-grouppp">
+        <label for="per"style=" font-size: 1.2rem; font-weight: bold; margin-left: 1.83;">Percentage/GPA</label>
+        <input  type="per" id="insitute" name="per" style="height: 35px;border-radius: 0.4rem;">
+    </div>
+</div>
+
+<div  class="pi-labell">
+  <h1>Skills</h1>
+  <p>Do you find fast-paced deadlines motivating?</p>
+
+  <label class="radio-button">
+    <input type="radio" name="motivation_deadlines" value="yes"> Yes
+  </label><br>
+
+  <label class="radio-button">
+    <input type="radio" name="motivation_deadlines" value="no"> No
+  </label>
+
+  <p>Do you have strong financial or analytical skills?</p>
+
+  <label class="radio-button">
+    <input type="radio" name="financial_skills" value="yes"> Yes
+  </label><br>
+
+  <label class="radio-button">
+    <input type="radio" name="financial_skills" value="no"> No
+  </label>
+  
+  <p>Do you have strong communication skills?</p>
+
+  <label class="radio-button">
+    <input type="radio" name="communication_skills" value="yes"> Yes
+  </label><br>
+
+  <label class="radio-button">
+    <input type="radio" name="communication_skills" value="no"> No
+  </label>
+
+  <p>Do you have strong technical skills?</p>
+
+  <label class="radio-button">
+    <input type="radio" name="technical_skills" value="yes"> Yes
+  </label><br>
+
+  <label class="radio-button">
+    <input type="radio" name="technical_skills" value="no"> No
+  </label>
+
+
+  <h1>Personality type</h1>
+  <p>Do you consider yourself more of an introvert (working behind the scenes) or an extrovert (preferring a more public role)?</p>
+
+  <label class="radio-button">
+    <input type="radio" name="personality_type" value="introvert"> Introvert
+  </label><br>
+
+  <label class="radio-button">
+    <input type="radio" name="personality_type" value="extrovert"> Extrovert
+  </label>
+
+  <p>Do you prefer to focus on one thing at a time, or do several things simultaneously?</p>
+
+  <label class="radio-button">
+    <input type="radio" name="focus_preference" value="one_thing"> One thing at a time
+  </label><br>
+
+  <label class="radio-button">
+    <input type="radio" name="focus_preference" value="several_things"> Several things simultaneously
+  </label>
+  
+  <p>Do you feel comfortable making important decisions?</p>
+
+  <label class="radio-button">
+    <input type="radio" name="decision_comfort" value="yes"> Yes
+  </label><br>
+
+  <label class="radio-button">
+    <input type="radio" name="decision_comfort" value="no"> No
+  </label>
+
+  <p>Do you feel comfortable in a role where you are responsible for motivating others?</p>
+
+  <label class="radio-button">
+    <input type="radio" name="motivation_role" value="yes"> Yes
+  </label><br>
+
+  <label class="radio-button">
+    <input type="radio" name="motivation_role" value="no"> No
+  </label>
+</div>
+
+
+  <h1>Career Goal</h1>
+
+
+ <label for="future-role">
+    <P>Imagine yourself in five years. What would be your ideal role and work environment?</P>
+  </label><br>
+  
+  <textarea id="future-role" name="future-role" rows="5" cols="50" placeholder="Type here..."></textarea>
+
+</div>
+
+</div>
+
+
+ 
+<button type="submit" class="button">Submit</button>                       
+                </div>
+            </div>
+        </div>
+    </form>
+    <div id="resumeDisplay"></div>
+
+    <script src="index.ts"></script>
+    <script src="index.js"></script>
+
+</body>
+</html>
